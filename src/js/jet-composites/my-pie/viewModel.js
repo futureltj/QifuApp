@@ -14,12 +14,22 @@ define(
         self.dataUrl = ko.observable('dataUrl');
         self.pieSeriesValue = ko.observableArray();
         self.threeDValue = ko.observable('off');
+        self.innerRadius=ko.observable(0);
+        self.centerLabel=ko.observable("");
         context.props.then(function (propertyMap) {
             //Store a reference to the properties for any later use
             
             self.properties = propertyMap;
+            
             if(self.properties.chartName!=undefined){
                 self.chartName(self.properties.chartName)
+            }
+            if(self.properties.innerRadius!=undefined){
+                console.log(self.properties.innerRadius)
+                self.innerRadius(self.properties.innerRadius)
+            }
+            if(self.properties.centerLabel!=undefined){
+                self.centerLabel(self.properties.centerLabel)
             }
             if(self.properties.dataUrl!=undefined){
                 console.log('3333:'+self.properties.dataUrl);

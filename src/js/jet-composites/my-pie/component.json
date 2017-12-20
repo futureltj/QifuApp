@@ -9,6 +9,10 @@
       "type": "string"
     },"chartName": {
       "type": "string"
+    },"innerRadius": {
+      "type": "number"
+    },"centerLabel": {
+      "type": "string"
     }
   },
   "methods": {
