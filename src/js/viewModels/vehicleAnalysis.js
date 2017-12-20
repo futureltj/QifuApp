@@ -3,30 +3,26 @@
  * The Universal Permissive License (UPL), Version 1.0
  */
 /*
- * Your about ViewModel code goes here
+ * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery', 'appController', 'ojs/ojlabel',
-  'ojs/ojinputtext', 'ojs/ojbutton', 'ojs/ojrouter'],
-  function (oj, ko, $, app) {
+define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet-composites/my-bar/loader', 'jet-composites/my-line/loader'],
+  function (oj, ko, $) {
 
-    function LoginViewModel() {
+    function VehicleAnalysisViewModel() {
       var self = this;
-      self.isLoggedIn=ko.pureComputed(function () {
-        return app.isLoggedIn()
-      })
+      self.dataurlarr = ko.observableArray();
+      self.dataurlarr.push({dataurl:'js/data/vehicle/EntryTimeData.json',chartname:'出入时段分析'});
       self.buttonClick = function (event) {
-        self.loginSuccess();
-        return true;
+        self.dataurlarr.pop()
+          self.dataurlarr.push({dataurl:'js/data/vehicle/EntryTimeData.json',chartname:'出入时段分析'});
       }
-      self.loginSuccess = function (response, data) {
-        app.isLoggedIn(true);
-        oj.Router.rootInstance.go('vehicleAnalysis');
 
-      };
-
-      self.loginFailure = function (statusCode, data) {
-        alert("登陆失败");
-      };
+      self.dataurlarr2=ko.observableArray();
+      self.dataurlarr2.push({dataurl:'js/data/vehicle/EachEstateEntryData.json',chartname:'各小区车辆出入分布'});
+      self.dataurlarr3=ko.observableArray();
+      self.dataurlarr3.push({dataurl:'js/data/vehicle/EntryTop10Data.json',chartname:'出入TOP 10'});
+      self.dataurlarr4=ko.observableArray();
+      self.dataurlarr4.push({dataurl:'js/data/vehicle/VehicleData.json',chartname:'各收费类型车辆分析'});
 
       // Below are a subset of the ViewModel methods invoked by the ojModule binding
       // Please reference the ojModule jsDoc for additional available methods.
@@ -90,6 +86,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'appController', 'ojs/ojlabel',
      * each time the view is displayed.  Return an instance of the ViewModel if
      * only one instance of the ViewModel is needed.
      */
-    return new LoginViewModel();
+    return new VehicleAnalysisViewModel();
   }
 );

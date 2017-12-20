@@ -22,23 +22,20 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
        self.router = oj.Router.rootInstance;
        self.router.configure({
          'login': {label: 'Login', isDefault: true},
-         'dashboard': {label: 'Dashboard'},
-         'incidents': {label: 'Incidents'},
-         'customers': {label: 'Customers'},
-         'about': {label: 'About'}
+         'vehicleAnalysis': {label: 'VehicleAnalysis'},
+         'personnelAnalysis': {label: 'PersonnelAnalysis'},
+         'incomeAndExpenditureAnalysis': {label: 'IncomeAndExpenditureAnalysis'},
        });
       oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
 
       // Navigation setup
       var navData = [
-      {name: 'Demo', id: 'dashboard',
-       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-chart-icon-24'},
-      {name: '出入分析', id: 'incidents',
-       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-fire-icon-24'},
-      {name: '人车分析', id: 'customers',
-       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-people-icon-24'},
-      {name: '利润分析', id: 'about',
-       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'}
+      {name: '车辆分析', id: 'vehicleAnalysis',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24'},
+      {name: '人员分析', id: 'personnelAnalysis',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24'},
+      {name: '收入支出分析', id: 'incomeAndExpenditureAnalysis',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24'}
       ];
       self.navDataSource = new oj.ArrayTableDataSource(navData, {idAttribute: 'id'});
 
