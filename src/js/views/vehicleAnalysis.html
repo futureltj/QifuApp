@@ -1,0 +1,21 @@
+<!--
+ Copyright (c) 2014, 2017, Oracle and/or its affiliates.
+ The Universal Permissive License (UPL), Version 1.0
+ -->
+<div class="oj-hybrid-padding">
+  <oj-button id='button3' on-click='[[buttonClick]]' style="display:none">
+    change
+  </oj-button>
+  <!-- ko foreach: dataurlarr -->
+  <my-line data-url="{{dataurl}}" chart-name="{{chartname}}"/>
+  <!-- /ko -->
+  <!-- ko foreach: dataurlarr2 -->
+  <my-pie data-url="{{dataurl}}" chart-name="{{chartname}}"/>
+  <!-- /ko -->
+  <!-- ko foreach: dataurlarr3 -->
+  <my-bar data-url="{{dataurl}}" chart-name="{{chartname}}"/>
+  <!-- /ko -->
+  <!-- ko foreach: dataurlarr4 -->
+  <my-bar data-url="{{dataurl}}" chart-name="{{chartname}}"/>
+  <!-- /ko -->
+</div>
