@@ -14,12 +14,24 @@ define(
         self.dataUrl = ko.observable('dataUrl');
         self.seriesValue = ko.observableArray();
         self.groupsValue = ko.observableArray();
+
+        self.stackValue = ko.observable('off');
+        self.orientationValue = ko.observable('vertical');
+
         context.props.then(function (propertyMap) {
             //Store a reference to the properties for any later use
             self.properties = propertyMap;
             if(self.properties.chartName!=undefined){
                 self.chartName(self.properties.chartName)
             }
+
+            if(self.properties.stackValue!=undefined){
+                self.stackValue(self.properties.stackValue)
+            }
+            if(self.properties.orientationValue!=undefined){
+                self.orientationValue(self.properties.orientationValue)
+            }
+
             if(self.properties.dataUrl!=undefined){
                 console.log('3333:'+self.properties.dataUrl);
                 self.dataUrl(self.properties.dataUrl);
