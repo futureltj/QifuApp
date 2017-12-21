@@ -9,6 +9,10 @@
       "type": "string"
     },"chartName": {
       "type": "string"
+    },"stackValue": {
+      "type": "string"
+    },"orientationValue": {
+      "type": "string"
     }
   },
   "methods": {
