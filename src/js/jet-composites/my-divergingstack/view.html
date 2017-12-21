@@ -1,0 +1,38 @@
+<!--
+  Copyright (c) 2015, 2017, Oracle and/or its affiliates.
+  The Universal Permissive License (UPL), Version 1.0
+-->
+<p data-bind="text:chartName"></p>
+<!--<oj-chart id="barChart"
+          type="bar" 
+          series="[[seriesValue]]"
+          groups="[[groupsValue]]" 
+          animation-on-display="auto"
+          animation-on-data-change="auto"
+          hover-behavior="dim"
+          style="max-width:500px;width:100%;height:350px;">
+</oj-chart>-->
+
+<oj-chart id="barChart"
+          type="bar" 
+          orientation="horizontal"
+          stack="[[stackValueChart]]"
+          stack-label="on"
+          series="[[seriesValue]]"
+          groups="[[groupsValue]]" 
+          animation-on-data-change="auto"
+          legend.sections="[[legendSections]]"
+          hover-behavior="dim"
+          y2-axis.position="bottom"
+          value-formats.series.tooltip-label="月份"
+          value-formats.value.tooltip-label="金额"
+          value-formats.value.scaling="thousand"
+          hide-and-show-behavior="withRescale"
+          x-axis.axis-line.rendered="off"
+          y-axis.major-tick.baseline-width="1"
+          y-axis.major-tick.line-width="0"
+          y-axis.tick-label.rendered="off"
+          style="display:inline-block;max-width:500px;width:100%;height:350px;vertical-align:middle; margin-right:4%;">
+</oj-chart>
+
+<!--          value-formats.group.tooltip-label="Company"-->
