@@ -7,7 +7,7 @@
 */
 
 #globalBody{
-    background: radial-gradient(ellipse farthest-corner, white,#fbfbfb,#f1eded);
+    background: radial-gradient(ellipse farthest-corner, white,#ffffff,#d0d0d0);
 }
 
 .demo-logo-icon{
@@ -23,12 +23,18 @@
     border:none !important;
 }
 
+.demo-qf-icon{
+    width: 130px;
+    height: 28px;
+    padding-bottom: 3px;
+    content:url("images/logo_words_white.png");
+}
 
 #button3{
     margin: 0 auto;
     width: 260px;
     border-radius: 5px;
-    background-color: #ee1a2dd6;
+    background-color: #ee1a2d;
     color: white;
 }
 
@@ -58,4 +64,14 @@
     font-size: 18px;
     font-weight: 300;
     line-height: 25px;
+}
+
+.oj-web-applayout-header {
+    z-index: 1;
+    background-color: #ee1a2d;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.oj-button.oj-default.oj-button-half-chrome .oj-button-icon, .oj-button.oj-focus-only.oj-button-half-chrome .oj-button-icon {
+    color: white;
 }
