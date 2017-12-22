@@ -75,3 +75,19 @@
 .oj-button.oj-default.oj-button-half-chrome .oj-button-icon, .oj-button.oj-focus-only.oj-button-half-chrome .oj-button-icon {
     color: white;
 }
+
+.sub_title_sty{
+    font-size: 20px;
+    font-weight: 500;
+    color: #0d3e44;
+    border-bottom: 1px solid #ee1a2d;
+    /* color: black; */
+    display: block;
+    width: fit-content;
+    padding-bottom: 7px;
+    list-style-type: disc;
+    display: list-item;
+    list-style-type: disc;
+    margin-left: 1em;
+    margin-top: 1em;
+}
