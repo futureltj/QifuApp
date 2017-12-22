@@ -4,10 +4,12 @@
  -->
 <div class="oj-hybrid-padding"  data-bind="style: { display: isLoggedIn? '' : 'none' }">
 
+    <div class="demo-logo-icon"></div>
+    
   <div id="form-container" >
     <div class="oj-form-layout">
       <div class="oj-form oj-md-labels-inline">
-        <div class="oj-flex">
+        <div class="oj-flex no-border">
           <div class="oj-flex-item" style="text-align:right;margin-right:10px;">
             <oj-label for="control1">账号：</oj-label>
           </div>
@@ -15,7 +17,7 @@
             <oj-input-text id="control1" style="max-width:10em" value=""></oj-input-text>
           </div>
         </div>
-        <div class="oj-flex">
+        <div class="oj-flex no-border">
           <div class="oj-flex-item" style="text-align:right;margin-right:10px;">
             <oj-label for="control3">密码：</oj-label>
           </div>
@@ -23,7 +25,7 @@
             <oj-input-text id="control3" style="max-width:10em" value=""></oj-input-text>
           </div>
         </div>
-        <div class="oj-flex" style="text-align:center">
+        <div class="oj-flex no-border" style="text-align:center">
           <oj-button id='button3' on-click='[[buttonClick]]'>
             登陆
           </oj-button>

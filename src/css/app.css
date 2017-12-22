@@ -5,3 +5,57 @@
     Description:
         This is where any of your application specific styles should be included
 */
+
+#globalBody{
+    background: radial-gradient(ellipse farthest-corner, white,#fbfbfb,#f1eded);
+}
+
+.demo-logo-icon{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    content:url("images/logo.png");
+}
+
+.oj-form-layout , .no-border{
+    border:none !important;
+}
+
+
+#button3{
+    margin: 0 auto;
+    width: 260px;
+    border-radius: 5px;
+    background-color: #ee1a2dd6;
+    color: white;
+}
+
+#button3 .oj-button-text{
+    color:white;
+}
+
+#form-container{
+    margin: 160px 0px 40px 0px;
+}
+
+#form-container .oj-form-layout .oj-form .oj-flex{
+    margin: 10px 0px 0px 0px;
+}
+
+#form-container .oj-form-layout .oj-form .oj-flex:nth-child(0){
+
+}
+
+
+#form-container .oj-form-layout .oj-form .oj-flex:last-child{
+    margin: 20px 0px 0px 0px;
+}
+
+
+.no-border label{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+}
