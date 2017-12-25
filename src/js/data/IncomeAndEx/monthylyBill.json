@@ -1,4 +1,7 @@
 {
+    "seriesTooltip": "名称",
+    "valueTooltip": "金额",
+    "groupTooltip": "月份",
     "series": [
         {
             "name": "水损耗（吨）",

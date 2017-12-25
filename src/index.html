@@ -63,7 +63,7 @@
            ** query size for a phone format and hidden until a user clicks on
            ** the header hamburger icon.
         -->
-        <div id="navDrawer" role="navigation" class="oj-contrast-marker oj-web-applayout-offcanvas oj-offcanvas-start">
+        <div id="navDrawer" role="navigation" class="oj-contrast-marker oj-web-applayout-offcanvas oj-offcanvas-start ">
             <oj-navigation-list data="[[navDataSource]]"
                                 edge="start"
                                 item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('navTemplate', true)]]"
@@ -87,6 +87,9 @@
                             <span>Application Navigation</span>
                         </oj-button>
                     </div>
+                    <div id="screenBlocker" class="oj-flex-bar-start" style="width: 80px;">
+                        
+                    </div>
                     <div class="oj-flex-bar-middle oj-sm-align-items-baseline">
                         <span role="img" class="oj-icon demo-qf-icon navTitleStyle"></span>
                         <!--<h1 class="navTitleStyle" title="Application Name" data-bind="text: titleName"></h1>-->
@@ -109,7 +112,7 @@
                         </oj-toolbar>
                     </div>
                 </div>
-                <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar">
+                <div role="navigation" class="oj-web-applayout-max-width oj-web-applayout-navbar navColor">
                     <oj-navigation-list class="oj-sm-only-hide oj-md-condense oj-md-justify-content-flex-end"
                                         data="[[navDataSource]]"
                                         edge="top"

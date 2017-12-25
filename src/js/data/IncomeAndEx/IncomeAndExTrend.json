@@ -1,4 +1,7 @@
 {
+    "seriesTooltip": "名称",
+    "valueTooltip": "金额",
+    "groupTooltip": "组",
     "series": [
         {
             "name": "预算收入",
