@@ -11,16 +11,25 @@
 }
 
 .demo-logo-icon{
+    max-width: 350px;
     width: 80%;
+    padding-right: 25px;
     text-align: center;
     margin: 0 auto;
     margin-top: 20%;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     content:url("images/logo.png");
 }
 
 .oj-form-layout , .no-border{
     border:none !important;
+}
+.navTitleStyle{
+    color: white;
+    font-size: 1.1em;
+    text-align: center;
+    margin: 0 auto;
+    padding-right: 6px;
 }
 
 .demo-qf-icon{
@@ -42,9 +51,9 @@
     color:white;
 }
 
-#form-container{
+/*#form-container{
     margin: 160px 0px 40px 0px;
-}
+}*/
 
 #form-container .oj-form-layout .oj-form .oj-flex{
     margin: 10px 0px 0px 0px;
@@ -79,15 +88,45 @@
 .sub_title_sty{
     font-size: 20px;
     font-weight: 500;
-    color: #0d3e44;
-    border-bottom: 1px solid #ee1a2d;
+    color: #ee1a2d;
+    /* border-bottom: 1px solid #ee1a2d; */
     /* color: black; */
     display: block;
     width: fit-content;
     padding-bottom: 7px;
-    list-style-type: disc;
+    /* list-style-type: disc; */
     display: list-item;
-    list-style-type: disc;
+    /* list-style-type: disc; */
     margin-left: 1em;
     margin-top: 1em;
 }
+
+.chartStyle{
+    width:calc(100% - 20px);
+    padding: 10px;
+    border: 3px solid lightgray;
+    border-radius: 4px;
+    border-style: outset;
+    margin-top: 1em;
+    padding-top: 20px;
+    max-width:1024px;
+}
+
+.oj-md-labels-inline > .oj-flex > .oj-flex-item:nth-child(even) {
+    text-align: left;
+}
+.oj-navigationlist-app-level.oj-navigationlist-horizontal .oj-navigationlist-item:not(.oj-disabled) a.oj-navigationlist-item-content > .oj-navigationlist-item-label {
+    color: lightgray;
+    font-size: 15px;
+}
+
+.oj-navigationlist-app-level.oj-navigationlist-horizontal .oj-navigationlist-item.oj-selected a.oj-navigationlist-item-content > .oj-navigationlist-item-label {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.oj-button-jqui.oj-default.oj-button-half-chrome, .oj-button-jqui.oj-focus-only.oj-button-half-chrome, .oj-button.oj-default.oj-button-half-chrome .oj-button-button, .oj-button.oj-focus-only.oj-button-half-chrome .oj-button-button {
+    text-shadow: none;
+    color: #ffffff;
+}
+
