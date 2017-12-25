@@ -2,10 +2,15 @@
   Copyright (c) 2015, 2017, Oracle and/or its affiliates.
   The Universal Permissive License (UPL), Version 1.0
 -->
+
+<!--<div class="chartStyle">-->
+    
+    
+
 <p class="sub_title_sty" data-bind="text:chartName"></p>
 
 
-<oj-chart id="lineAreaChart"
+<oj-chart id="lineAreaChart" class="chartStyle"
           type="lineWithArea"
           series="[[seriesValue]]"
           groups="[[groupsValue]]" 
@@ -18,5 +23,7 @@
           orientation="vertical"
           stack="off"
           hover-behavior="dim"
-          style="max-width:500px;width:100%;height:350px;">
+          style="height:350px;">
 </oj-chart>
+
+<!--</div>-->
