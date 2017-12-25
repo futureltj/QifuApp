@@ -14,7 +14,7 @@ define(
         self.dataUrl = ko.observable('dataUrl');
         self.seriesValue = ko.observableArray();
         self.groupsValue = ko.observableArray();
-
+        
         self.stackValue = ko.observable('off');
         self.orientationValue = ko.observable('vertical');
 
