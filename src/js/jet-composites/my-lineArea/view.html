@@ -4,8 +4,8 @@
 -->
 
 <!--<div class="chartStyle">-->
-    
-    
+
+
 
 <p class="sub_title_sty" data-bind="text:chartName"></p>
 
@@ -14,10 +14,9 @@
           type="lineWithArea"
           series="[[seriesValue]]"
           groups="[[groupsValue]]" 
-          translations.labelDefaultGroupName ="someOtherKey"
-          translations.label-group ="someOtherKey"
-          translations.label-series ="名称"
-          translations.label-value ="金额"
+          value-formats.series.tooltip-label="[[serToolValue]]"
+          value-formats.value.tooltip-label="[[valToolValue]]"
+          value-formats.group.tooltip-label="[[groupToolValue]]"
           animation-on-display="auto"
           animation-on-data-change="auto"
           orientation="vertical"

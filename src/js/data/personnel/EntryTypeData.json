@@ -1,20 +1,25 @@
-[
-  {
-    "name": "其他",
-    "items": [
-      605
+{
+    "seriesTooltip": "人员",
+    "valueTooltip": "次数",
+    "groupTooltip": "小时",
+    "dataArr": [
+        {
+            "name": "其他",
+            "items": [
+                605
+            ]
+        },
+        {
+            "name": "装修人员",
+            "items": [
+                51
+            ]
+        },
+        {
+            "name": "业主",
+            "items": [
+                2344
+            ]
+        }
     ]
-  },
-  {
-    "name": "装修人员",
-    "items": [
-      51
-    ]
-  },
-  {
-    "name": "业主",
-    "items": [
-      2344
-    ]
-  }
-]
+}

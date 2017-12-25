@@ -1,4 +1,8 @@
-[
+{
+    "seriesTooltip": "费用名称",
+    "valueTooltip": "",
+    "groupTooltip": "金额",
+    "dataArr": [
   {
     "name": "工资费",
     "items": [
@@ -30,3 +34,4 @@
     ]
   }
 ]
+}

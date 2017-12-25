@@ -1,4 +1,7 @@
 {
+    "seriesTooltip": "",
+    "valueTooltip": "停车数",
+    "groupTooltip": "时间内",
     "series": [
         {
             "name": "车辆个数",

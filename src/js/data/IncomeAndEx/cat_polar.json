@@ -1,4 +1,7 @@
 {
+    "seriesTooltip": "名称",
+    "valueTooltip": "百分比",
+    "groupTooltip": "小区",
     "series":
             [
                 {
