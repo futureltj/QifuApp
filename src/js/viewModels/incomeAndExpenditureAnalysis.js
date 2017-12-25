@@ -7,7 +7,7 @@
 /**
  * incomeAndExpenditureAnalysis module
  */
-define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet-composites/my-bar/loader', 'jet-composites/my-line/loader', 'jet-composites/my-divergingstack/loader','jet-composites/my-polarchart/loader'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet-composites/my-bar/loader', 'jet-composites/my-line/loader', 'jet-composites/my-lineArea/loader','jet-composites/my-polarchart/loader'],
         function (oj, ko, $) {
             /**
              * The view model for the main content view template
