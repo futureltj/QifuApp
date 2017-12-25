@@ -18,14 +18,14 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet
                 }
 
                 self.dataurlarr2 = ko.observableArray();
-                self.dataurlarr2.push({dataurl: 'js/data/vehicle/EachEstateEntryData.json', chartname: '上月各小区车辆出入分布'});
+                self.dataurlarr2.push({dataurl: 'js/data/vehicle/EachEstateEntryData.json', chartname: '上月各出入口车辆出入分布'});
+                //self.dataurlarr3 = ko.observableArray();
+                //self.dataurlarr3.push({dataurl: 'js/data/vehicle/EntryTop10Data.json', chartname: '上一日出入TOP10'});
                 self.dataurlarr3 = ko.observableArray();
-                self.dataurlarr3.push({dataurl: 'js/data/vehicle/EntryTop10Data.json', chartname: '上一日出入TOP10'});
-                self.dataurlarr4 = ko.observableArray();
-                self.dataurlarr4.push({dataurl: 'js/data/vehicle/VehicleData.json', chartname: '各收费类型车辆分析'});
+                self.dataurlarr3.push({dataurl: 'js/data/vehicle/VehicleData.json', chartname: '各收费类型车辆分析'});
 
-                self.dataurlarr5 = ko.observableArray();
-                self.dataurlarr5.push({dataurl: 'js/data/vehicle/timeframeCheck.json', chartname: '停车时段分析'});
+                self.dataurlarr4 = ko.observableArray();
+                self.dataurlarr4.push({dataurl: 'js/data/vehicle/timeframeCheck.json', chartname: '停车时段分析'});
                 // Below are a subset of the ViewModel methods invoked by the ojModule binding
                 // Please reference the ojModule jsDoc for additional available methods.
 
