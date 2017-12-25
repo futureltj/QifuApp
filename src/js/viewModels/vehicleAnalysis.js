@@ -18,7 +18,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet
                 }
 
                 self.dataurlarr2 = ko.observableArray();
-                self.dataurlarr2.push({dataurl: 'js/data/vehicle/EachEstateEntryData.json', chartname: '上月出入口车辆出入分布'});
+                self.dataurlarr2.push({dataurl: 'js/data/vehicle/EachEstateEntryData.json', chartname: '上月各出入口车辆出入分布'});
                 //self.dataurlarr3 = ko.observableArray();
                 //self.dataurlarr3.push({dataurl: 'js/data/vehicle/EntryTop10Data.json', chartname: '上一日出入TOP10'});
                 self.dataurlarr3 = ko.observableArray();
