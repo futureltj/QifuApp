@@ -21,17 +21,17 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet
                 self.dataurlarr2 = ko.observableArray();
                 self.dataurlarr2.push({dataurl: 'js/data/IncomeAndEx/totalExpend.json', chartname: '上月支出分析'});
 
-                self.dataurlarr4 = ko.observableArray();
-                self.dataurlarr4.push({dataurl: 'js/data/IncomeAndEx/IncomeAndExTrend.json', chartname: '上月收入与支出分析'});
-
-                self.dataurlarr5 = ko.observableArray();
-                self.dataurlarr5.push({dataurl: 'js/data/IncomeAndEx/DivergingIncomeAndExp.json', chartname: '上月收入和支出对比分析'});
-
-                self.dataurlarr3 = ko.observableArray();
-                self.dataurlarr3.push({dataurl: 'js/data/IncomeAndEx/monthylyBill.json', chartname: '水电损耗分析(按月)'});
+                //self.dataurlarr5 = ko.observableArray();
+                //self.dataurlarr5.push({dataurl: 'js/data/IncomeAndEx/IncomeAndExTrend.json', chartname: '上月收入与支出分析'});
 
                 self.dataurlarr6 = ko.observableArray();
-                self.dataurlarr6.push({dataurl: 'js/data/IncomeAndEx/cat_polar.json', chartname: '上月水电损耗分析(按小区)'});
+                self.dataurlarr6.push({dataurl: 'js/data/IncomeAndEx/DivergingIncomeAndExp.json', chartname: '收入和支出对比分析(按月)'});
+
+                self.dataurlarr4 = ko.observableArray();
+                self.dataurlarr4.push({dataurl: 'js/data/IncomeAndEx/monthylyBill.json', chartname: '水电损耗分析(按月)'});
+
+                self.dataurlarr3 = ko.observableArray();
+                self.dataurlarr3.push({dataurl: 'js/data/IncomeAndEx/cat_polar.json', chartname: '上月各小区收入和支出对比分析'});
 
 
 
