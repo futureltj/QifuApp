@@ -32,6 +32,9 @@ define(
                 console.log('3333:' + self.properties.dataUrl);
                 self.dataUrl(self.properties.dataUrl);
                 $.getJSON(self.properties.dataUrl, function (data) {
+                    self.serToolValue(data.seriesTooltip);
+                    self.valToolValue(data.valueTooltip);
+                    self.groupToolValue(data.groupTooltip);
                     self.seriesValue(data.series);
                     self.groupsValue(data.groups);
                 });
