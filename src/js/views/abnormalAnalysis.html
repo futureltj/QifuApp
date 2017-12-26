@@ -46,17 +46,17 @@
                 </span> 
             </div>
             <div slot="body">
-                <oj-table id='abnormalSubTable' aria-label='DoorTable'
+                <oj-table id='abnormalSubTable' aria-label='DoorTable' style="max-height:80vh;"
                           data='[[dataprovider]]' 
                           columns-default.sortable='disabled' 
                           columns='[{"headerText": "门禁卡Id", 
-                          "field": "doorKeyId"},
+                          "field": "ICID"},
                           {"headerText": "No", 
-                          "field": "number"},
+                          "field": "ICNO"},
                           {"headerText": "业主名称", 
-                          "field": "names"},
+                          "field": "HolderName"},
                           {"headerText": "类型", 
-                          "field": "catagory"}]'>
+                          "field": "PaperType"}]'>
                 </oj-table>
             </div>
             <div slot="footer">

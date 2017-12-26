@@ -5,7 +5,7 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet-composites/my-bar/loader', 'jet-composites/my-line/loader', 'ojs/ojtable', 'ojs/ojarraydataprovider', 'jet-composites/my-funnel/loader', 'ojs/ojbutton', 'ojs/ojdialog', 'ojs/ojmoduleanimations'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet-composites/my-bar/loader', 'jet-composites/my-line/loader', 'ojs/ojcollectiontabledatasource', 'ojs/ojtable', 'ojs/ojarraydataprovider', 'ojs/ojlabel', 'jet-composites/my-funnel/loader', 'ojs/ojbutton', 'ojs/ojdialog', 'ojs/ojmoduleanimations'],
         function (oj, ko, $) {
 
             function VehicleAnalysisViewModel() {
@@ -25,6 +25,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet
                 self.serToolValue = ko.observable();
                 self.valToolValue = ko.observable();
                 self.groupToolValue = ko.observable();
+                self.datasource = ko.observable();
+
                 $.ajax({
                     type: "GET",
                     url: 'js/data/abnormal/accessCardData.json',
@@ -39,36 +41,34 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet
                 });
 
                 var deptArray = [
-                    {"doorKeyId": 11, "number": "203", "names": "Tom", "catagory": "F10212"}
+                    {"ICID": 11, "number": "203", "names": "Tom", "catagory": "F10211"}
                 ];
                 self.DataObservableArray = ko.observableArray(deptArray);
-                self.dataprovider = new oj.ArrayDataProvider(self.DataObservableArray, {idAttribute: 'doorKeyId'});
+                self.dataprovider = new oj.ArrayDataProvider(self.DataObservableArray, {idAttribute: 'ICID'});
 
                 self.abnormalKeyDrillDown = function (event) {
                     self.DataObservableArray.removeAll();
                     console.log(event.detail);
-                    self.drillingTitle("表格");
-
-
-                    $.get('js/data/abnormal/drilling/doorKeyData.json', function (resp) {
-
-
-                        resp.arrayData.forEach(function (ele) {
-                            self.DataObservableArray.push(ele);
-                        })
-                        console.log(self.DataObservableArray());
-                        setTimeout(function () {
-                            self.dataprovider = new oj.ArrayDataProvider(self.DataObservableArray, {idAttribute: 'doorKeyId'});
-                        }, 100)
-
-//                            abnormalSubTable").refresh();
-                        $("#popDrillingChart").ojDialog("open");
+                    var jsonData;
+                    switch (event.detail.group) {
+                        case "FFFF":
+                            jsonData = 'js/data/abnormal/drilling/FFFFData.json';
+                            break;
+                        case "未知卡号(Unknown)":
+                            jsonData = 'js/data/abnormal/drilling/UnknownData.json';
+                            break;
+                        case "无卡号(NULL)":
+                            jsonData = 'js/data/abnormal/drilling/NULLData.json';
+                            break;
                     }
-                    );
+                    self.drillingTitle("详细列表");
 
-
-
-                }
+                    $.getJSON(jsonData,
+                            function (resp) {
+                                self.DataObservableArray(resp.arrayData);
+                                document.querySelector('#popDrillingChart').open();
+                            });
+                };
                 // Below are a subset of the ViewModel methods invoked by the ojModule binding
                 // Please reference the ojModule jsDoc for additional available methods.
 
