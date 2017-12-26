@@ -1,0 +1,12 @@
+{
+  "arrayData" : [
+    { "ICID": "D6EB936B", "ICNO": "为空", "HolderName": "马**", "PaperType": "业主"},
+    { "ICID": "16147062", "ICNO": "为空", "HolderName": "郑**", "PaperType": "业主"},
+    { "ICID": "526F29AB", "ICNO": "为空", "HolderName": "杨**", "PaperType": "业主"},
+    { "ICID": "F6EC4657", "ICNO": "为空", "HolderName": "郑**", "PaperType": "业主"},
+    { "ICID": "C6220A5A", "ICNO": "为空", "HolderName": "顾**", "PaperType": "业主"},
+    { "ICID": "160E1F9B", "ICNO": "为空", "HolderName": "摩**时卡", "PaperType": "其他"},
+    { "ICID": "C2E0C6CC", "ICNO": "为空", "HolderName": "区**", "PaperType": "业主"},
+    { "ICID": "026E5CDA", "ICNO": "为空", "HolderName": "钟**", "PaperType": "业主"}
+  ]
+}
