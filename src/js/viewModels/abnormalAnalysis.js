@@ -5,21 +5,70 @@
 /*
  * Your dashboard ViewModel code goes here
  */
-define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet-composites/my-bar/loader', 'jet-composites/my-line/loader','jet-composites/my-funnel/loader'],
+define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet-composites/my-bar/loader', 'jet-composites/my-line/loader', 'ojs/ojtable', 'ojs/ojarraydataprovider', 'jet-composites/my-funnel/loader', 'ojs/ojbutton', 'ojs/ojdialog', 'ojs/ojmoduleanimations'],
         function (oj, ko, $) {
 
             function VehicleAnalysisViewModel() {
                 var self = this;
                 self.dataurlarr = ko.observableArray();
+                self.drillingTitle = ko.observable("表格");
                 self.dataurlarr.push({dataurl: 'js/data/abnormal/vehicleAndPersonData.json', chartname: '长期不出村分析'});
-
                 self.dataurlarr2 = ko.observableArray();
                 self.dataurlarr2.push({dataurl: 'js/data/abnormal/arrearageData.json', chartname: '长期欠费分析'});
                 //self.dataurlarr3 = ko.observableArray();
                 //self.dataurlarr3.push({dataurl: 'js/data/vehicle/EntryTop10Data.json', chartname: '上一日出入TOP10'});
-                self.dataurlarr3 = ko.observableArray();
-                self.dataurlarr3.push({dataurl: 'js/data/abnormal/accessCardData.json', chartname: '门禁卡重号分析'});
+//                self.dataurlarr3 = ko.observableArray();
+//                self.dataurlarr3.push({dataurl: 'js/data/abnormal/accessCardData.json', chartname: '门禁卡重号分析'});
+                self.abnChartName = ko.observable('门禁卡重号分析');
+                self.seriesValue = ko.observableArray();
+                self.groupsValue = ko.observableArray();
+                self.serToolValue = ko.observable();
+                self.valToolValue = ko.observable();
+                self.groupToolValue = ko.observable();
+                $.ajax({
+                    type: "GET",
+                    url: 'js/data/abnormal/accessCardData.json',
+                    dataType: "json",
+                    success: function (resp) {
+                        self.seriesValue(resp.series);
+                        self.groupsValue(resp.groups);
+                        self.serToolValue(resp.seriesTooltip);
+                        self.valToolValue(resp.valueTooltip);
+                        self.groupToolValue(resp.groupTooltip);
+                    }
+                });
 
+                var deptArray = [
+                    {"doorKeyId": 11, "number": "203", "names": "Tom", "catagory": "F10212"}
+                ];
+                self.DataObservableArray = ko.observableArray(deptArray);
+                self.dataprovider = new oj.ArrayDataProvider(self.DataObservableArray, {idAttribute: 'doorKeyId'});
+
+                self.abnormalKeyDrillDown = function (event) {
+                    self.DataObservableArray.removeAll();
+                    console.log(event.detail);
+                    self.drillingTitle("表格");
+
+
+                    $.get('js/data/abnormal/drilling/doorKeyData.json', function (resp) {
+
+
+                        resp.arrayData.forEach(function (ele) {
+                            self.DataObservableArray.push(ele);
+                        })
+                        console.log(self.DataObservableArray());
+                        setTimeout(function () {
+                            self.dataprovider = new oj.ArrayDataProvider(self.DataObservableArray, {idAttribute: 'doorKeyId'});
+                        }, 100)
+
+//                            abnormalSubTable").refresh();
+                        $("#popDrillingChart").ojDialog("open");
+                    }
+                    );
+
+
+
+                }
                 // Below are a subset of the ViewModel methods invoked by the ojModule binding
                 // Please reference the ojModule jsDoc for additional available methods.
 
@@ -37,7 +86,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet
                 self.handleActivated = function (info) {
                     // Implement if needed
                 };
-
                 /**
                  * Optional ViewModel method invoked after the View is inserted into the
                  * document DOM.  The application can put logic that requires the DOM being
@@ -48,10 +96,8 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet
                  * @param {boolean} info.fromCache - A boolean indicating whether the module was retrieved from cache.
                  */
                 self.handleAttached = function (info) {
-                    // Implement if needed
+
                 };
-
-
                 /**
                  * Optional ViewModel method invoked after the bindings are applied on this View. 
                  * If the current View is retrieved from cache, the bindings will not be re-applied
@@ -63,7 +109,6 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet
                 self.handleBindingsApplied = function (info) {
                     // Implement if needed
                 };
-
                 /*
                  * Optional ViewModel method invoked after the View is removed from the
                  * document DOM.

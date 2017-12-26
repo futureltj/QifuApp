@@ -3,17 +3,68 @@
  The Universal Permissive License (UPL), Version 1.0
 -->
 <div class="oj-hybrid-padding">
-<!--    <oj-button id='button3' on-click='[[buttonClick]]' style="display:none">
-        change
-    </oj-button>-->
+    <!--    <oj-button id='button3' on-click='[[buttonClick]]' style="display:none">
+            change
+        </oj-button>-->
     <!-- ko foreach: dataurlarr -->
     <my-bar data-url="{{dataurl}}" chart-name="{{chartname}}" />
     <!-- /ko -->
- 
-       <!-- ko foreach: dataurlarr2 -->
+
+    <!-- ko foreach: dataurlarr2 -->
     <my-funnel data-url="{{dataurl}}" chart-name="{{chartname}}"/>
     <!-- /ko -->
-    <!-- ko foreach: dataurlarr3 -->
-    <my-bar data-url="{{dataurl}}" chart-name="{{chartname}}"/>
-    <!-- /ko -->
+    <!--  
+    //<!-- ko foreach: dataurlarr3 --//>
+       <my-bar id="abnormalKey" data-url="{{dataurl}}" chart-name="{{chartname}}"/>
+       //<!-- /ko --//>
+    -->
+    <p class="sub_title_sty" data-bind="text:abnChartName"></p>
+    <oj-chart id="barChart" class="chartStyle"
+              type="bar" 
+              series="[[seriesValue]]"
+              groups="[[groupsValue]]" 
+              orientation="vertical"
+              stack="off"
+              animation-on-display="auto"
+              animation-on-data-change="auto"
+              hover-behavior="dim"
+              y-axis.tick-label.scaling ="none"
+              drilling  ="on"
+              on-oj-drill="[[abnormalKeyDrillDown]]"
+              value-formats.value.scaling ="none"
+              value-formats.series.tooltip-label="[[serToolValue]]"
+              value-formats.value.tooltip-label="[[valToolValue]]"
+              value-formats.group.tooltip-label="[[groupToolValue]]"
+              style="height:350px;">
+    </oj-chart>
+
+
+    <div id="dialogWrapper">
+        <oj-dialog style="display:none" id="popDrillingChart" title="" modality="modeless" cancel-behavior='icon'>
+            <div slot="header" class="oj-helper-clearfix">
+                <span id="dialogTitleId" class="oj-dialog-title" data-bind="text:drillingTitle">
+                </span> 
+            </div>
+            <div slot="body">
+                <oj-table id='abnormalSubTable' aria-label='DoorTable'
+                          data='[[dataprovider]]' 
+                          columns-default.sortable='disabled' 
+                          columns='[{"headerText": "门禁卡Id", 
+                          "field": "doorKeyId"},
+                          {"headerText": "No", 
+                          "field": "number"},
+                          {"headerText": "业主名称", 
+                          "field": "names"},
+                          {"headerText": "类型", 
+                          "field": "catagory"}]'>
+                </oj-table>
+            </div>
+            <div slot="footer">
+                <oj-button id="okButton" data-bind="click: function() {
+                  document.querySelector('#popDrillingChart').close();
+                }"> 确认
+                </oj-button>
+            </div>
+        </oj-dialog>
+    </div>
 </div>
