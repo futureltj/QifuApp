@@ -1,10 +1,10 @@
 {
     "seriesTooltip": "",
-    "valueTooltip": "卡种",
-    "groupTooltip": "月份",
+    "valueTooltip": "数量",
+    "groupTooltip": "卡号",
     "series": [
         {
-            "name": "数量",
+            "name": "",
             "items": [
                 8,
                 586,

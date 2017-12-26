@@ -1,4 +1,7 @@
 {
+    "seriesTooltip": "",
+    "valueTooltip": "数量",
+    "groupTooltip": "时刻",
     "series": [
         {
             "name": "出/车次数",

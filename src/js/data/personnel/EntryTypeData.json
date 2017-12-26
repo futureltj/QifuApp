@@ -1,7 +1,7 @@
 {
     "seriesTooltip": "人员",
     "valueTooltip": "次数",
-    "groupTooltip": "小时",
+    "groupTooltip": "",
     "dataArr": [
         {
             "name": "其他",

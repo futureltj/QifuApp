@@ -1,7 +1,7 @@
 {
-    "seriesTooltip": "名称",
+    "seriesTooltip": "",
     "valueTooltip": "次数",
-    "groupTooltip": "小时",
+    "groupTooltip": "时刻",
     "series": [
         {
             "name": "出入次数",

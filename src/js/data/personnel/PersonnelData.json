@@ -1,7 +1,7 @@
 {
 
-    "seriesTooltip": "项目",
-    "valueTooltip": "金额",
+    "seriesTooltip": "",
+    "valueTooltip": "人数",
     "groupTooltip": "年龄段",
     "series": [
         {

@@ -1,6 +1,6 @@
 {
-    "seriesTooltip": "名称",
-    "valueTooltip": "金额",
+    "seriesTooltip": "",
+    "valueTooltip": "数量",
     "groupTooltip": "月份",
     "series": [
         {

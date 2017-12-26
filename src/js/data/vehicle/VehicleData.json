@@ -1,4 +1,7 @@
 {
+  "seriesTooltip": "",
+  "valueTooltip": "数量",
+  "groupTooltip": "类型",
   "series": [
     {
       "name": "总车辆数",
