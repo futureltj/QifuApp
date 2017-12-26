@@ -25,6 +25,7 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
                     'vehicleAnalysis': {label: 'VehicleAnalysis'},
                     'personnelAnalysis': {label: 'PersonnelAnalysis'},
                     'incomeAndExpenditureAnalysis': {label: 'IncomeAndExpenditureAnalysis'},
+                    'abnormalAnalysis': {label: 'AbnormalAnalysis'}
                 });
                 oj.Router.defaults['urlAdapter'] = new oj.Router.urlParamAdapter();
 
@@ -37,7 +38,9 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
                     {name: '人员分析', id: 'personnelAnalysis',
                         iconClass: 'oj-navigationlist-item-icon demo-icon-font-24'},
                     {name: '收入支出分析', id: 'incomeAndExpenditureAnalysis',
-                        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24'}
+                        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24'},
+                    {name: '异常分析', id: 'abnormalAnalysis',
+                        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24'},
                 ];
                 self.navDataSource = new oj.ArrayTableDataSource(navData, {idAttribute: 'id'});
 
