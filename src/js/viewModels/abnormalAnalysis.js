@@ -61,7 +61,7 @@ define(['ojs/ojcore', 'knockout', 'jquery', 'jet-composites/my-pie/loader', 'jet
                             jsonData = 'js/data/abnormal/drilling/NULLData.json';
                             break;
                         default:
-                            jsonData = 'js/data/abnormal/drilling/FFFFData.json';
+                            jsonData = 'js/data/abnormal/drilling/NULLData.json';
                             break;
                     }
                     self.drillingTitle("详细列表");
