@@ -3,11 +3,14 @@
  The Universal Permissive License (UPL), Version 1.0
  */
 define(
-        ['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart'], function (oj, ko, $) {
+        ['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart','jet-composites/demo-chart-three-d-effect-control/loader'], function (oj, ko, $) {
     'use strict';
 
     function ExampleComponentModel(context) {
         var self = this;
+
+        self.threeDValue = ko.observable('off');
+        
         self.composite = context.element;
         //Example observable
         self.chartName = ko.observable('');

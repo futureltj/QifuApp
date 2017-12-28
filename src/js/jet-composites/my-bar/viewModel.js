@@ -3,12 +3,14 @@
  The Universal Permissive License (UPL), Version 1.0
  */
 define(
-        ['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart'], function (oj, ko, $) {
+        ['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart','jet-composites/demo-chart-orientation-control/loader'], function (oj, ko, $) {
     'use strict';
 
     function ExampleComponentModel(context) {
         var self = this;
         self.composite = context.element;
+        self.orientationValue = ko.observable('vertical');
+
         //Example observable
         self.chartName = ko.observable('');
         self.dataUrl = ko.observable('dataUrl');
@@ -17,7 +19,6 @@ define(
 
         self.stackValue = ko.observable('off');
         self.orientationValue = ko.observable('vertical');
-
         self.serToolValue = ko.observable();
         self.valToolValue = ko.observable();
         self.groupToolValue = ko.observable();
