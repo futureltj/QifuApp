@@ -1,0 +1,31 @@
+{
+    "arrayData": [
+        {
+            "name": "name1",
+            "time": "2017-12-02",
+            "customer_number": "tel:1543231231",
+            "sup_number": "tel:1543231232",
+            "priColorStyle" : {
+                "color":"red"
+            }
+        },
+        {
+            "name": "name2",
+            "time": "2017-12-02",
+            "customer_number": "tel:1543231231",
+            "sup_number": "tel:1543231232",
+            "priColorStyle" :  {
+                "color":"orange"
+            }
+        },
+        {
+            "name": "name3",
+            "time": "2017-12-02",
+            "customer_number": "tel:1543231231",
+            "sup_number": "tel:1543231232",
+            "priColorStyle" :  {
+                "color":"orange"
+            }
+        }
+    ]
+}
