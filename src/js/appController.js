@@ -16,9 +16,9 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
                 self.smScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
                 var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
                 self.mdScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
-                
+
                 self.fontColor = ko.observable('"color":"red"');
-                
+
                 self.isLoggedIn = ko.observable(false);
                 self.AlertTitle = ko.observable("通知列表");
                 // Router setup
@@ -78,8 +78,10 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
 //                            })});
 
                 self.priStyle = ko.computed(function (data) {
-                    return {"color": data};
+                    return 2;
                 });
+
+                this.fontColor = ko.observable("red");
 
                 self.popAlertWindow = function () {
                     $.getJSON("js/data/dashAlertList/alertData.json",
