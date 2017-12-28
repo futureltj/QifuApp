@@ -29,7 +29,7 @@
     font-size: 1.1em;
     text-align: center;
     margin: 0 auto;
-    padding-right: 6px;
+    padding-right: 30px;
 }
 
 .demo-qf-icon{
@@ -146,7 +146,7 @@
 }
 
 
-#popDrillingChart .oj-button.oj-default.oj-button-half-chrome .oj-button-icon{
+#popAlertChart .oj-button.oj-default.oj-button-half-chrome .oj-button-icon, #popDrillingChart .oj-button.oj-default.oj-button-half-chrome .oj-button-icon{
     color: #0572ce;
 }
 
@@ -156,8 +156,13 @@
     color: #0572ce;
 }
 
+#popAlertChart .oj-button-jqui.oj-default.oj-button-half-chrome,#popAlertChart .oj-button-jqui.oj-focus-only.oj-button-half-chrome,#popAlertChart .oj-button.oj-default.oj-button-half-chrome .oj-button-button, .oj-button.oj-focus-only.oj-button-half-chrome .oj-button-button {
+    text-shadow: none;
+    color: #0572ce;
+}
 
-#popDrillingChart{
+
+#popAlertChart, #popDrillingChart{
     overflow: hidden;
     min-width: 360px;
     width: 95%;
@@ -170,4 +175,11 @@
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
     background: #ffffff;
     border: 1px solid #c8d7e0;
+}
+
+
+
+.oj-button-cAlert{
+    height: 2.0em;
+    content:url("images/alertmark.png");
 }

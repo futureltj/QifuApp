@@ -86,9 +86,12 @@
                             <span slot="startIcon" class="oj-web-applayout-offcanvas-icon"></span>
                             <span>Application Navigation</span>
                         </oj-button>
+                        <oj-button id="notificationButton" class="" style="height: 2.875rem;line-height: 2.875rem;" on-click="[[popAlertWindow]]">
+                            <span class="oj-button-cAlert"></span>
+                        </oj-button>
                     </div>
                     <div id="screenBlocker" class="oj-flex-bar-start" style="width: 80px;">
-                        
+
                     </div>
                     <div class="oj-flex-bar-middle oj-sm-align-items-baseline">
                         <span role="img" class="oj-icon demo-qf-icon navTitleStyle"></span>
@@ -121,20 +124,62 @@
                     </oj-navigation-list>
                 </div>
             </header>
+
+            <div id="dialogWrapperAlert">
+                <oj-dialog style="display:none" id="popAlertChart" title="" modality="modeless" cancel-behavior='icon'>
+                    <div slot="header" class="oj-helper-clearfix">
+                        <span id="dialogTitleId" class="oj-dialog-title" data-bind="text: AlertTitle">
+                        </span> 
+                    </div>
+                    <div slot="body">
+                        <oj-list-view id="listview" aria-label="list"  style="height:60vh;"
+                                      data="[[alertDataProvider]]" item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('alertlist_template', true)]]" selection-mode="single">
+                        </oj-list-view>
+                    </div>
+                    <div slot="footer">
+                        <oj-button id="okButton" data-bind="click: function() {
+                  document.querySelector('#popAlertChart').close();
+                }"> 确认
+                        </oj-button>
+                    </div>
+                </oj-dialog>
+            </div>
+
             <div role="main" class="oj-web-applayout-max-width oj-web-applayout-content" data-bind="ojModule: router.moduleConfig">
             </div>
+
+            <script type="text/html" id="alertlist_template">
+            <li >
+                <div class="oj-flex"   >
+                            <div class="oj-sm-2">
+                                <span class="header" data-bind="text: name"></span>
+                            </div>
+                            <div class="oj-sm-4">
+                                <span class="header" data-bind="text: time"></span>
+                            </div>
+                            <div class="oj-sm-3">
+                               <a href="tel:1312367785">通知业主</a>
+                        </oj-button>
+                            </div>
+                            <div class="oj-sm-3">
+                               <a href="tel:1312367785">通知物业</a>
+                            </div>
+                </div>
+            </li>
+</script>
+
             <!--        <footer class="oj-web-applayout-footer" role="contentinfo" data-bind="style: { display: isLoggedIn()? '' : 'none' }">
                       <div class="oj-web-applayout-footer-item oj-web-applayout-max-width">
                         <ul>
-                           ko foreach: footerLinks 
-                          <li><a data-bind="text : name, attr : {id: linkId, href : linkTarget}"></a></li>
-                           /ko 
-                        </ul>
-                      </div>
-                      <div class="oj-web-applayout-footer-item oj-web-applayout-max-width oj-text-secondary-color oj-text-sm">
-                        Copyright © 2014, 2017 Oracle and/or its affiliates All rights reserved.
-                      </div>
-                    </footer>-->
+                                       ko foreach: footerLinks 
+                                      <li><a data-bind="text : name, attr : {id: linkId, href : linkTarget}"></a></li>
+                                       /ko 
+                                    </ul>
+                                  </div>
+                                  <div class="oj-web-applayout-footer-item oj-web-applayout-max-width oj-text-secondary-color oj-text-sm">
+                                    Copyright © 2014, 2017 Oracle and/or its affiliates All rights reserved.
+                                  </div>
+                                </footer>-->
         </div>
     </div>
 
