@@ -86,9 +86,7 @@
                             <span slot="startIcon" class="oj-web-applayout-offcanvas-icon"></span>
                             <span>Application Navigation</span>
                         </oj-button>
-                        <oj-button id="notificationButton" class="" style="height: 2.875rem;line-height: 2.875rem;" on-click="[[popAlertWindow]]">
-                            <span class="oj-button-cAlert"></span>
-                        </oj-button>
+                        
                     </div>
                     <div id="screenBlocker" class="oj-flex-bar-start" style="width: 80px;">
 
@@ -98,6 +96,11 @@
                         <!--<h1 class="navTitleStyle" title="Application Name" data-bind="text: titleName"></h1>-->
                     </div>
                     <div class="oj-flex-bar-end">
+                       
+                        <oj-button id="notificationButton" class="" style="height: 2.875rem;line-height: 2.875rem;" on-click="[[popAlertWindow]]">
+                                    <span class="oj-button-cAlert"></span>
+                                </oj-button>
+                    
                         <!-- Responsive Toolbar -->
                         <oj-toolbar>
                             <oj-menu-button id="userMenu" display="[[smScreen() ? 'icons' : 'all']]" chroming="half">
@@ -156,10 +159,6 @@
                             </div>
                             <div class="oj-sm-4">
                                 <span class="header" data-bind="text: time"></span>
-                            </div>
-                            <div class="oj-sm-3">
-                               <a href="tel:1312367785">通知业主</a>
-                        </oj-button>
                             </div>
                             <div class="oj-sm-3">
                                <a href="tel:1312367785">通知物业</a>
