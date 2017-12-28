@@ -12,12 +12,14 @@
 
 <div id="dialogWrapper">
 
-  <oj-dialog style="display:none" id="popDrillingChart2" title="" >
+  <oj-dialog style="display:none" id="popDrillingChart2" title="" modality="modeless" cancel-behavior='icon'>
 
     <div slot="header" class="oj-helper-clearfix">
       <span id="dialogTitleId" class="oj-dialog-title" data-bind="text:drillingTitle">
       </span>
     </div>
+
+
 
     <div slot="body">
       <!-- 
@@ -50,7 +52,7 @@
     <div slot="footer">
       <oj-button id="okButton" data-bind="click: function() {
             document.querySelector('#popDrillingChart2').close();
-          }"> 确认
+          }"> <span style="color:#034379;">确认</span>
       </oj-button>
     </div>
 
@@ -58,9 +60,7 @@
 </div>
 
 <script type="text/html" id="template">
-  <li style="padding:0" data-bind="attr: {id: id}" class="item-marker">
-      <div class="oj-offcanvas-outer-wrapper">
-        <div class="oj-offcanvas-inner-wrapper">
+  <li style="padding:0" data-bind="attr: {id: id}" class="">
 
           <div style="padding:0.8571rem">
               <div class="oj-flex">
@@ -98,41 +98,7 @@
                </div>
            </div>
           -->
-           <div tabIndex="-1" data-bind="attr: {id: 'second_toolbar_'+id}" class="oj-offcanvas-end" style="width:225px">
-            <!--   
-            <div data-bind="click: $parent.handleMore" class="oj-swipetoreveal-more">
-                   <div class="oj-flex-bar" style="height:100%">
-                       <div class="oj-flex-bar-center-absolute">
-                           <div class="oj-flex oj-sm-flex-direction-column">
-                               <div title=".demo-library-icon-24" role="img" class="oj-flex-item demo-library-icon-24 demo-icon-font-24"></div>
-                               <div style="padding-top: 10px" class="oj-flex-item">More</div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-              -->
-               <div data-bind="click: $parent.handleFlag" class="oj-swipetoreveal-flag">
-                   <div class="oj-flex-bar" style="height:100%">
-                       <div class="oj-flex-bar-center-absolute">
-                           <div class="oj-flex oj-sm-flex-direction-column">
-                               <div title=".demo-library-icon-24" role="img" class="oj-flex-item demo-library-icon-24 demo-icon-font-24"></div>
-                               <div style="padding-top: 10px" class="oj-flex-item">通知业主</div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-               <div data-bind="click: $parent.handleTrash" class="oj-swipetoreveal-alert oj-swipetoreveal-default">
-                   <div class="oj-flex-bar" style="height:100%">
-                       <div class="oj-flex-bar-center-absolute">
-                           <div class="oj-flex oj-sm-flex-direction-column">
-                               <div title=".demo-library-icon-24" role="img" class="oj-flex-item demo-library-icon-24 demo-icon-font-24"></div>
-                               <div style="padding-top: 10px" class="oj-flex-item">通知物业</div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-        </div>
+
       </div>
   </li>
 </script>
