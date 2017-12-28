@@ -5,8 +5,8 @@
 /*
  * Your application specific code will go here
  */
-define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarraytabledatasource',
-    'ojs/ojoffcanvas', 'ojs/ojrouter'],
+define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarraytabledatasource', 'ojs/ojdialog',
+    'ojs/ojoffcanvas', 'ojs/ojrouter', 'ojs/ojlistview', 'ojs/ojarraydataprovider', 'ojs/ojjsontreedatasource'],
         function (oj, ko) {
             function ControllerViewModel() {
                 var self = this;
@@ -16,8 +16,11 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
                 self.smScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(smQuery);
                 var mdQuery = oj.ResponsiveUtils.getFrameworkQuery(oj.ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
                 self.mdScreen = oj.ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
-
+                
+                self.fontColor = ko.observable('"color":"red"');
+                
                 self.isLoggedIn = ko.observable(false);
+                self.AlertTitle = ko.observable("通知列表");
                 // Router setup
                 self.router = oj.Router.rootInstance;
                 self.router.configure({
@@ -49,16 +52,50 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
                 self.mdScreen.subscribe(function () {
                     oj.OffcanvasUtils.close(self.drawerParams);
                 });
-                
+
                 self.drawerParams = {
                     displayMode: 'push',
                     selector: '#navDrawer',
                     content: '#pageContent'
                 };
-                
+
                 // Called by navigation drawer toggle button and after selection of nav drawer item
                 self.toggleDrawer = function () {
                     return oj.OffcanvasUtils.toggle(self.drawerParams);
+                }
+
+//                self.dataSource = ko.observable();
+                self.tempData = ko.observableArray([{
+                        "name": "name1",
+                        "time": "2017-12-02",
+                        "customer_number": "1543231231",
+                        "sup_number": "1543231232"
+                    }]);
+                this.alertDataProvider = new oj.ArrayDataProvider(self.tempData, {'idAttribute': 'name'});
+//                self.alertDataProvider = new oj.ArrayDataProvider(self.tempData(),
+//                        {keys: self.tempData().map(function (value) {
+//                                return value.name;
+//                            })});
+
+                self.priStyle = ko.computed(function (data) {
+                    return {"color": data};
+                });
+
+                self.popAlertWindow = function () {
+                    $.getJSON("js/data/dashAlertList/alertData.json",
+                            function (data)
+                            {
+
+
+//                                self.dataSource(new oj.JsonTreeDataSource(data.arrayData));
+                                self.tempData(data.arrayData);
+//                                self.alertDataProvider = new oj.ArrayDataProvider(self.tempData(),
+//                                        {keys: self.tempData().map(function (value) {
+//                                                return value.name;
+//                                            })});
+                                document.querySelector('#popAlertChart').open();
+                            }
+                    );
                 }
                 // Add a close listener so we can move focus back to the toggle button when the drawer closes
                 $("#navDrawer").on("ojclose", function () {
