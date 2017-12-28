@@ -1,25 +1,26 @@
+
+
 {
   "arrayData" : [
-    { "name": "王**", "cnt": "670", "month": "3", "PaperType": "未催缴"},
-    { "name": "陈**", "cnt": "820", "month": "4", "PaperType": "未催缴"},
-    { "name": "秦**", "cnt": "620", "month": "3", "PaperType": "未催缴"},
-    { "name": "曹**", "cnt": "540", "month": "3", "PaperType": "未催缴"},
-    { "name": "胡**", "cnt": "760", "month": "3", "PaperType": "未催缴"},
-    { "name": "杨**", "cnt": "910", "month": "5", "PaperType": "未催缴"},
-    { "name": "詹**", "cnt": "770", "month": "4", "PaperType": "未催缴"},
-    { "name": "贾**", "cnt": "637", "month": "3", "PaperType": "未催缴"},
-    { "name": "邱**", "cnt": "498", "month": "3", "PaperType": "未催缴"},
-    { "name": "付**", "cnt": "1020", "month": "5", "PaperType": "未催缴"},
-    { "name": "姚**", "cnt": "782", "month": "4", "PaperType": "未催缴"},
-    { "name": "黄**", "cnt": "450", "month": "3", "PaperType": "未催缴"},
-    { "name": "叶**", "cnt": "680", "month": "4", "PaperType": "已催缴"},
-    { "name": "梁**", "cnt": "760", "month": "4", "PaperType": "已催缴"},
-    { "name": "谭**", "cnt": "870", "month": "5", "PaperType": "已催缴"},
-    { "name": "方**", "cnt": "960", "month": "5", "PaperType": "已催缴"},
-    { "name": "彭**", "cnt": "390", "month": "3", "PaperType": "已催缴"},
-    { "name": "张**", "cnt": "980", "month": "4", "PaperType": "已催缴"},
-    { "name": "蓝**", "cnt": "990", "month": "5", "PaperType": "已催缴"},
-    { "name": "高**", "cnt": "980", "month": "4", "PaperType": "已催缴"}
+    {"id":"1", "name": "王**", "cnt": "670", "month": "3", "PaperType": "未催缴"},
+    {"id":"2", "name": "陈**", "cnt": "820", "month": "4", "PaperType": "未催缴"},
+    {"id":"3", "name": "秦**", "cnt": "620", "month": "3", "PaperType": "未催缴"},
+    {"id":"4", "name": "曹**", "cnt": "540", "month": "3", "PaperType": "未催缴"},
+    {"id":"5", "name": "胡**", "cnt": "760", "month": "3", "PaperType": "未催缴"},
+    {"id":"6", "name": "杨**", "cnt": "910", "month": "5", "PaperType": "未催缴"},
+    {"id":"7", "name": "詹**", "cnt": "770", "month": "4", "PaperType": "未催缴"},
+    {"id":"8", "name": "贾**", "cnt": "637", "month": "3", "PaperType": "未催缴"},
+    {"id":"9", "name": "邱**", "cnt": "498", "month": "3", "PaperType": "未催缴"},
+    {"id":"10", "name": "付**", "cnt": "1020", "month": "5", "PaperType": "未催缴"},
+    {"id":"11", "name": "姚**", "cnt": "782", "month": "4", "PaperType": "未催缴"},
+    {"id":"12", "name": "黄**", "cnt": "450", "month": "3", "PaperType": "未催缴"},
+    {"id":"13", "name": "叶**", "cnt": "680", "month": "4", "PaperType": "已催缴"},
+    {"id":"14", "name": "梁**", "cnt": "760", "month": "4", "PaperType": "已催缴"},
+    {"id":"15", "name": "谭**", "cnt": "870", "month": "5", "PaperType": "已催缴"},
+    {"id":"16", "name": "方**", "cnt": "960", "month": "5", "PaperType": "已催缴"},
+    {"id":"17", "name": "彭**", "cnt": "390", "month": "3", "PaperType": "已催缴"},
+    {"id":"18", "name": "张**", "cnt": "980", "month": "4", "PaperType": "已催缴"},
+    {"id":"19", "name": "蓝**", "cnt": "990", "month": "5", "PaperType": "已催缴"},
+    {"id":"20", "name": "高**", "cnt": "980", "month": "4", "PaperType": "已催缴"}
   ]
 }
-
