@@ -1,0 +1,25 @@
+
+{
+  "arrayData" : [
+    { "name": "AEDBD19D", "cnt": "FFFF", "month": "王**                      ", "PaperType": "业主"},
+    { "name": "A2997DB9", "cnt": "FFFF", "month": "G**4546                   ", "PaperType": "其他"},
+    { "name": "6237A81C", "cnt": "FFFF", "month": "秦**                      ", "PaperType": "业主"},
+    { "name": "BDE94A48", "cnt": "FFFF", "month": "曹**                      ", "PaperType": "业主"},
+    { "name": "EE78B2DE", "cnt": "FFFF", "month": "胡**                      ", "PaperType": "业主"},
+    { "name": "177A7358", "cnt": "FFFF", "month": "杨**                      ", "PaperType": "业主"},
+    { "name": "EDF9E42E", "cnt": "FFFF", "month": "詹**                      ", "PaperType": "业主"},
+    { "name": "D25CDC45", "cnt": "FFFF", "month": "贾**                      ", "PaperType": "业主"},
+    { "name": "ABE08CB6", "cnt": "FFFF", "month": "邱**                      ", "PaperType": "业主"},
+    { "name": "1A815F18", "cnt": "FFFF", "month": "Y**2126                   ", "PaperType": "其他"},
+    { "name": "468E2A82", "cnt": "FFFF", "month": "姚**                      ", "PaperType": "业主"},
+    { "name": "1402BBF6", "cnt": "FFFF", "month": "黄**                      ", "PaperType": "业主"},
+    { "name": "0B09E5B6", "cnt": "FFFF", "month": "叶**                      ", "PaperType": "业主"},
+    { "name": "A4AA6FAE", "cnt": "FFFF", "month": "梁**                      ", "PaperType": "业主"},
+    { "name": "8A6D9853", "cnt": "FFFF", "month": "谭**                      ", "PaperType": "业主"},
+    { "name": "AD043048", "cnt": "FFFF", "month": "方**                      ", "PaperType": "业主"},
+    { "name": "52740447", "cnt": "FFFF", "month": "Y**0699                   ", "PaperType": "其他"},
+    { "name": "6AC8833F", "cnt": "FFFF", "month": "张**                      ", "PaperType": "业主"},
+    { "name": "02269E33", "cnt": "FFFF", "month": "A**589                    ", "PaperType": "其他"},
+    { "name": "C2BA8A15", "cnt": "FFFF", "month": "A**428                    ", "PaperType": "其他"}
+  ]
+}
