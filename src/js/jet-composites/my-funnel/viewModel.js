@@ -3,7 +3,7 @@
  The Universal Permissive License (UPL), Version 1.0
  */
 define(
-        ['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart', 'ojs/ojlabel', 'ojs/ojcollectiontabledatasource', 'ojs/ojtable', 'ojs/ojarraydataprovider', 'ojs/ojbutton', 'ojs/ojdialog', 'ojs/ojmoduleanimations'], function (oj, ko, $) {
+        ['ojs/ojcore', 'knockout', 'jquery', 'ojs/ojchart', 'ojs/ojlabel', 'ojs/ojcollectiontabledatasource', 'ojs/ojtable', 'ojs/ojarraydataprovider', 'ojs/ojbutton', 'ojs/ojdialog', 'ojs/ojmoduleanimations', 'ojs/ojswipetoreveal', 'ojs/ojlistview', 'ojs/ojdatacollection-common', 'ojs/ojbutton', 'ojs/ojmenu'], function (oj, ko, $) {
     'use strict';
 
     function ExampleComponentModel(context) {
@@ -50,13 +50,13 @@ define(
             //Parse your component properties here 
 
         });
-        self.drillingTitle = ko.observable("表格");
+        self.drillingTitle = ko.observable("");
         var deptArray = [
-            {"ICID": 11, "number": "203", "names": "Tom", "catagory": "F10211"}
+            { "id": "1", "name": "王**", "cnt": "4892", "month": "3", "PaperType": "2"},
         ];
         self.DataObservableArray = ko.observableArray(deptArray);
-        self.dataprovider = new oj.ArrayDataProvider(self.DataObservableArray, {idAttribute: 'ICID'});
-
+        //self.dataprovider = new oj.ArrayDataProvider(self.DataObservableArray, {idAttribute: 'name'});
+        self.dataSource = new oj.ArrayTableDataSource(self.DataObservableArray, {idAttribute: 'id'});
         self.abnormalKeyDrillDown = function (event) {
             self.DataObservableArray.removeAll();
             console.log(event.detail);
@@ -75,7 +75,7 @@ define(
                     jsonData = 'js/data/abnormal/drilling2/m3.json';
                     break;
             }
-            self.drillingTitle("详细列表");
+            self.drillingTitle("欠费人员列表");
 
             $.getJSON(jsonData,
                     function (resp) {
@@ -83,7 +83,14 @@ define(
                         document.querySelector('#popDrillingChart2').open();
                     });
         };
-
+        self.buttonClick1 = function(event){
+            self.clickedButton(event.currentTarget.id);
+            return true;
+        }
+        self.buttonClick2 = function(event){
+            self.clickedButton(event.currentTarget.id);
+            return true;
+        }
     }
     ;
 
