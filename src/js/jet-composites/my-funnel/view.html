@@ -15,6 +15,37 @@
           value-formats.series.tooltip-label="[[serToolValue]]"
           value-formats.value.tooltip-label="[[valToolValue]]"
           value-formats.group.tooltip-label="[[groupToolValue]]"
+          drilling  ="on"
+          on-oj-drill="[[abnormalKeyDrillDown]]"
           style-defaults.three-d-effect="off"
           style="height:350px;">
 </oj-chart>
+
+<div id="dialogWrapper">
+  <oj-dialog style="display:none" id="popDrillingChart2" title="" modality="modeless" cancel-behavior='icon'>
+      <div slot="header" class="oj-helper-clearfix">
+          <span id="dialogTitleId" class="oj-dialog-title" data-bind="text:drillingTitle">
+          </span> 
+      </div>
+      <div slot="body">
+          <oj-table id='abnormalSubTable' aria-label='DoorTable' style="max-height:70vh;"
+                    data='[[dataprovider]]' 
+                    columns-default.sortable='disabled' 
+                    columns='[{"headerText": "业主名称", 
+                    "field": "name"},
+                    {"headerText": "欠费金额", 
+                    "field": "cnt"},
+                    {"headerText": "欠费月数", 
+                    "field": "month"},
+                    {"headerText": "操作", 
+                    "field": "PaperType"}]'>
+          </oj-table>
+      </div>
+      <div slot="footer">
+          <oj-button id="okButton" data-bind="click: function() {
+            document.querySelector('#popDrillingChart2').close();
+          }"> 确认
+          </oj-button>
+      </div>
+  </oj-dialog>
+</div>
