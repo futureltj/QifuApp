@@ -76,13 +76,11 @@
                   <strong class="oj-text-sm oj-text-primary-color" data-bind="text: PaperType"></strong>
               </div>
               <div class="oj-flex">
-                  <oj-button id='button1' class="oj-text-sm oj-text-primary-color" data-bind="click: function() {
-                    alert('1')
-                    window.location.href = 'tel://13811118888';
+                  <oj-button data-bind="click: function() {
+                    window.location.href = 'tel:13811118888';
                   }">通知业主</oj-button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  <oj-button id='button1' class="oj-text-sm oj-text-primary-color" data-bind="click: function() {
-                    alert('2')
-                    window.location.href = 'tel://95779';
+                  <oj-button data-bind="click: function() {
+                    window.location.href = 'tel:95779';
                   }">通知物业</oj-button>
               </div>
           </div>
