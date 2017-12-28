@@ -66,8 +66,9 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
 
 //                self.dataSource = ko.observable();
                 self.tempData = ko.observableArray([{
-                        "name": "name1",
-                        "time": "2017-12-02",
+                        "name": "频繁出入",
+                        "time": "14:20:10",
+                        "info": "粤A***0Z",
                         "customer_number": "1543231231",
                         "sup_number": "1543231232"
                     }]);

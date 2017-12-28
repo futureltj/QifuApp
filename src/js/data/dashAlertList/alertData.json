@@ -1,8 +1,9 @@
 {
     "arrayData": [
         {
-            "name": "name1",
-            "time": "2017-12-02",
+            "name": "已注销卡",
+            "info": "AC5AC1B6",
+            "time": "14:20:20",
             "customer_number": "tel:1543231231",
             "sup_number": "tel:1543231232",
             "priColorStyle" : {
@@ -10,8 +11,9 @@
             }
         },
         {
-            "name": "name2",
-            "time": "2017-12-02",
+            "name": "长期不出村车辆",
+            "info":"粤A***Z2",
+            "time": "14:30:12",
             "customer_number": "tel:1543231231",
             "sup_number": "tel:1543231232",
             "priColorStyle" :  {
@@ -19,13 +21,45 @@
             }
         },
         {
-            "name": "name3",
-            "time": "2017-12-02",
+            "name": "频繁出入",
+            "info":"粤A***F7",
+            "time": "14:32:30",
+            "customer_number": "tel:1543231231",
+            "sup_number": "tel:1543231232",
+            "priColorStyle" :  {
+                "color":"orange"
+            }
+        },
+        {
+            "name": "已注销卡",
+            "info": "CBDF9695",
+            "time": "14:33:20",
+            "customer_number": "tel:1543231231",
+            "sup_number": "tel:1543231232",
+            "priColorStyle" : {
+                "color":"red"
+            }
+        },
+        {
+            "name": "长期不出村车辆",
+            "info":"闽A***AV",
+            "time": "14:34:12",
+            "customer_number": "tel:1543231231",
+            "sup_number": "tel:1543231232",
+            "priColorStyle" :  {
+                "color":"orange"
+            }
+        },
+        {
+            "name": "频繁出入",
+            "info":"鄂K***17",
+            "time": "14:35:30",
             "customer_number": "tel:1543231231",
             "sup_number": "tel:1543231232",
             "priColorStyle" :  {
                 "color":"orange"
             }
         }
+
     ]
 }

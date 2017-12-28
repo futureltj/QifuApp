@@ -125,7 +125,7 @@
             </header>
 
             <div id="dialogWrapperAlert">
-                <oj-dialog style="display:none" id="popAlertChart" title="" modality="modeless" >
+                <oj-dialog style="display:none" id="popAlertChart" title="" >
                     
                     <div slot="header" class="oj-helper-clearfix">
                         <span id="dialogTitleId" class="oj-dialog-title" >
@@ -138,14 +138,12 @@
                             selection-mode="single">
                         </oj-list-view>
                     </div>
-                    <!--
                     <div slot="footer">
                         <oj-button id="okButton" data-bind="click: function() {
                   document.querySelector('#popAlertChart').close();
                 }"> 确认
                         </oj-button>
                     </div>
-                -->
                 </oj-dialog>
             </div>
 
@@ -156,9 +154,11 @@
                 <div style="padding:0.8571rem">
                         <div class="oj-flex">
                             <strong class="oj-text-primary-color" data-bind="text: time"></strong>
-                            <strong class="oj-text-primary-color">&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                            <strong class="oj-text-primary-color">&nbsp;&nbsp;</strong>
                             <strong class="oj-text-primary-color" data-bind="text: name"></strong>
-                            <strong class="oj-text-primary-color">&nbsp;&nbsp;&nbsp;&nbsp;</strong>
+                            <strong class="oj-text-primary-color">&nbsp;&nbsp;</strong>
+                            <strong class="oj-text-primary-color" data-bind="text: info"></strong>
+                            <strong class="oj-text-primary-color">&nbsp;&nbsp;</strong>
                             <strong class="oj-text-primary-color">
                             <a data-bind="click: function() {
                                 window.location.href = 'tel:13811118888';
