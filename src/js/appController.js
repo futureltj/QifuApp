@@ -79,10 +79,8 @@ define(['ojs/ojcore', 'knockout', 'ojs/ojrouter', 'ojs/ojknockout', 'ojs/ojarray
 //                            })});
 
                 self.priStyle = ko.computed(function (data) {
-                    return 2;
+                    return {"color": data};
                 });
-
-                this.fontColor = ko.observable("red");
 
                 self.popAlertWindow = function () {
                     $.getJSON("js/data/dashAlertList/alertData.json",
