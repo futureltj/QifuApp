@@ -12,7 +12,7 @@
 
 <div id="dialogWrapper">
 
-  <oj-dialog style="display:none" id="popDrillingChart2" title="" modality="modeless" cancel-behavior='icon'>
+  <oj-dialog style="display:none" id="popDrillingChart2" title="" modality="modeless" >
 
     <div slot="header" class="oj-helper-clearfix">
       <span id="dialogTitleId" class="oj-dialog-title" data-bind="text:drillingTitle">
@@ -34,7 +34,7 @@
                     "field": "PaperType"}]'>
           </oj-table>
           -->
-      <oj-list-view id="listview" aria-label="swipe to reveal on listview item" style="width:100%;height:300px" data="[[dataSource]]"
+      <oj-list-view id="listview"  style="height:40vh;"  data="[[dataSource]]"
         item.renderer="[[oj.KnockoutTemplateUtils.getRenderer('template')]]">
         <!--
         <oj-menu slot="contextMenu" style="display:none" aria-label="Swipe Actions" on-oj-action="[[handleMenuItemAction]]" on-oj-before-open="[[handleMenuBeforeOpen]]">
@@ -76,12 +76,12 @@
                   <strong class="oj-text-sm oj-text-primary-color" data-bind="text: PaperType"></strong>
               </div>
               <div class="oj-flex">
-                  <oj-button data-bind="click: function() {
+                  <a data-bind="click: function() {
                     window.location.href = 'tel:13811118888';
-                  }">通知业主</oj-button>&nbsp;&nbsp;&nbsp;&nbsp;
-                  <oj-button data-bind="click: function() {
+                  }">通知业主</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a data-bind="click: function() {
                     window.location.href = 'tel:95779';
-                  }">通知物业</oj-button>
+                  }">通知物业</a>
               </div>
           </div>
 <!--
